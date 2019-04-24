@@ -1,0 +1,8 @@
+
+# Build output directies #
+##########################
+/target
+*/target
+/build
+*/build
+
