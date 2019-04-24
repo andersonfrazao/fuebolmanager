@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+    <constant name="struts.devMode" value="false" />
+	
+	<include file="struts-default.xml" />
+	<package name="default" extends="struts-default" >
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<interceptors>
+			<interceptor name="loginInterceptor" class="br.com.futebolmanager.action.interceptor.LoginInterceptor"/>
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="loginInterceptor"/>
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack >			
+		</interceptors>
+       <global-results>
+            <result name="globalExceptionResult" type="tiles">exception.page</result>
+            <result name="sessaoexpirada" type="tiles">expired.page</result>
+        </global-results>   
+       <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="globalExceptionResult" />
+        </global-exception-mappings>	
+		<action name="login" class="br.com.futebolmanager.action.LoginAction">
+			<result name="login" type="tiles">login.page</result>
+			<result name="inicio" type="redirect">inicio.action</result>
+			<result name="equipe" type="redirect">equipe.action</result>
+			<result name="usuario" type="redirect">usuario.action</result>
+		</action>
+		<action name="inicio" class="br.com.futebolmanager.action.InicioAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="input" type="tiles">inicio.page</result>	
+		</action>
+		<action name="equipe" class="br.com.futebolmanager.action.equipe.EquipeAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="input" type="tiles">equipe.page</result>
+			<result name="cadastro_equipe" type="redirect">cadastroEquipe.action</result>	
+		</action>
+		<action name="cadastroUsuario" class="br.com.futebolmanager.action.usuario.CadastroUsuarioAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="input" type="tiles">cadastroUsuario.page</result>
+			<result name="voltar" type="redirect">usuario.action</result>	
+		</action>
+		<action name="usuario" class="br.com.futebolmanager.action.usuario.UsuarioAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
+			<result name="usuario" type="tiles">usuario.page</result>
+			<result name="cadastro_usuario" type="redirect">cadastroUsuario.action</result>
+			<result name="input" type="redirect">usuario.action</result>
+			<result type="redirect-action">
+				<param name="actionName">cadastroUsuario</param>
+				<param name="paramIdUsuario">${paramIdUsuario}</param>
+				<param name="method">edit</param>
+			</result>
+		</action>
+		<action name="cadastroEquipe" class="br.com.futebolmanager.action.equipe.CadastroEquipeAction">
+			<result name="input" type="tiles">cadastroEquipe.page</result>
+			<result name="voltar" type="redirect">equipe.action</result>
+		</action>	
+	</package>
+</struts>

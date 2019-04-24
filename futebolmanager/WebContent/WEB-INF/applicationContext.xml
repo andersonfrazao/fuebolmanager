@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+				http://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+				http://www.springframework.org/schema/aop 
+				http://www.springframework.org/schema/aop/spring-aop-2.0.xsd 
+				http://www.springframework.org/schema/tx 
+				http://www.springframework.org/schema/tx/spring-tx-2.0.xsd 
+				http://www.springframework.org/schema/jee 
+				http://www.springframework.org/schema/jee/spring-jee-2.0.xsd 
+				http://www.springframework.org/schema/context
+				http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+	default-autowire="byName"
+	default-lazy-init="false">
+	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	     <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+	     <property name="url" value="jdbc:oracle:thin:@localhost:1521:XE" />
+	     <property name="username" value="anderson" />
+	     <property name="password" value="anderson" />
+	 </bean>    
+	  
+	<bean id="entityManagerFactory"
+	     class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+	     <property name="dataSource" ref="dataSource" />
+	     <property name="jpaVendorAdapter">
+	         <bean
+	             class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+	             <property name="database" value="ORACLE" />
+	             <property name="showSql" value="true" />
+	         </bean>
+	     </property>
+	 </bean>
+	<bean id="transactionManager" 
+	      class="org.springframework.orm.jpa.JpaTransactionManager">
+	      <property name="entityManagerFactory" ref="entityManagerFactory" />
+	  </bean>
+	  
+	  <tx:annotation-driven transaction-manager="transactionManager" />
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+ 		<!-- the transactional semantics... -->
+		<tx:attributes>
+    		<!-- all methods starting with 'get' are read-only -->
+    		<tx:method name="*" rollback-for="java.lang.Exception" />
+   	 		<!-- other methods use the default transaction settings (see below) -->
+  		</tx:attributes>
+  	</tx:advice>
+  	<aop:config>
+  		<aop:pointcut id="methods" expression="execution(* br.com.futebolmanager.service.relatorio.service.*.*(..))"/>
+  		<aop:advisor advice-ref="txAdvice" pointcut-ref="methods"/>
+  	</aop:config>  	
+    
+	<bean id="loginService" class="br.com.futebolmanager.service.LoginService"/>
+	<bean id="ufService" class="br.com.futebolmanager.service.uf.UfService"/>
+	<bean id="equipeService" class="br.com.futebolmanager.service.equipe.EquipeService"/>
+	<bean id="usuarioService" class="br.com.futebolmanager.service.usuario.UsuarioService"/>
+	<bean id="perfilService" class="br.com.futebolmanager.service.perfil.PerfilService"/>
+	
+   <bean id="loginAction" scope="prototype"
+    	class="br.com.futebolmanager.action.LoginAction">
+    	<property name="loginBusiness" ref="loginBusiness"></property>
+    </bean>	
+    
+    <bean id="loginBusiness" class="br.com.futebolmanager.business.LoginBusiness">
+    	<property name="loginService" ref="loginService"></property>
+    </bean>
+
+    <bean id="equipeBusiness" class="br.com.futebolmanager.business.equipe.EquipeBusiness">
+    	<property name="ufService" ref="ufService"/>
+    	<property name="equipeService" ref="equipeService"/>
+    </bean>
+    
+    <bean id="equipeAction" scope="prototype"
+    	class="br.com.futebolmanager.action.equipe.EquipeAction">
+    	<property name="equipeBusiness" ref="equipeBusiness"></property>
+    </bean>
+    <bean id="usuarioBusiness" class="br.com.futebolmanager.business.usuario.UsuarioBusiness">
+    	<property name="usuarioService" ref="usuarioService"/>
+    	<property name="perfilService" ref="perfilService"/>
+    </bean>
+   <bean id="usuarioAction" scope="prototype"
+    	class="br.com.futebolmanager.action.usuario.UsuarioAction">
+    	<property name="usuarioBusiness" ref="usuarioBusiness"></property>
+    </bean>
+   <bean id="cadastroUsuarioAction" scope="prototype"
+    	class="br.com.futebolmanager.action.usuario.CadastroUsuarioAction">
+    	<property name="usuarioBusiness" ref="usuarioBusiness"></property>
+    </bean>
+</beans>	  

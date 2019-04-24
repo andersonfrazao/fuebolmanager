@@ -1,0 +1,158 @@
+body {
+	background: #fff;
+	font-family: Arial, Helvetica, san-serif;}
+	
+p, ul, h1, h2, h3, h4, h5, td {
+	font-family: Arial, Helvetica, san-serif;}
+
+td {
+	color: #666666;}
+	
+th, th h3, th h5 {
+	font-weight: normal;
+	text-align: left;
+	margin: 0;
+	padding: 0 0 0 1px;
+	color: #666;}
+	
+h1 img {
+	display: inline;}
+	
+h2 {
+	margin: 0;
+	padding: 0 0 0 1px;
+/*	font-size: 16px;
+	line-height: 16px; */
+	font-weight: normal;
+	color: #3B73B9;}
+	
+h3 {
+	margin: 0 0 10px 0;
+	padding: 0 0 0 1px;
+	color: #666;
+	font-size: 12px;
+	line-height: 15px; 
+	font-weight: bold;}
+	
+#bodyHead h3 {
+	margin-bottom: 0;
+	color: #33659E;
+	font-weight: bold;}
+
+h3.noMargin {
+	margin-bottom: 0;}
+	
+h4 {
+	margin: 0 0 10px 0;
+	padding: 0 0 0 1px;
+/*	font-size: 11px;
+	line-height: 15px; */
+	color: #666;
+	font-weight: bold;}
+
+h5 {
+	color: #666;
+	margin: 0;
+	padding: 0 0 0 1px;
+/*	font-size: 11px;
+	line-height: 15px; */
+	font-weight: bold;}
+
+h5.eyebrow {
+    color: #666;
+/*   line-height: 11px; */
+    font-weight: normal;}
+
+h5.question {
+	color: #333;}
+
+h6 {
+	color: #666;
+	margin: 0;
+	padding: 0 0 0 1px;
+/*	font-size: 11px;
+	line-height: 15px; */
+	font-weight: normal;}
+		
+p {
+	margin: 0 0 15px 0;
+	padding: 0 0 0 1px;
+	}
+
+			
+ul {
+	list-style-type: disc;
+	list-style-position: outside;
+	margin: 0 0 15px 15px;
+	padding-left: 0 !important;
+	padding-left: 5px;
+	padding-left/**/:/**/1px;}
+ 
+/* all lists have bullets by default. Use class="noBull" for a list with no bullets */
+
+
+
+ol {
+	list-style-position: outside;
+	padding: 0 0 0 30px;
+	margin-left: 0;}
+	
+ol li {
+	padding: 0 0 10px 0;}
+
+/* Three additional styles of ordered lists */	
+ol.upperAlpha {
+	list-style-type: upper-alpha;}
+
+ol.lowerAlpha {
+	list-style-type: lower-alpha;}
+
+ol.upperRoman {
+	list-style-type: upper-roman;}
+
+ol.lowerRoman {
+	list-style-type: lower-roman;}
+
+		
+img {
+	border: 0;}
+
+em {
+	font-style: normal;
+	font-weight: bold;}
+		
+a:link {
+	color: #3B73B9;
+	text-decoration: none;}
+
+a:visited {
+	color: #636;
+	text-decoration: none;}
+
+a:hover {
+	color: #A9B8DF;
+	text-decoration: underline;}
+
+
+ul.relatedLinks a:link, ul.relatedLinks a:visited {
+	text-decoration: none;}
+
+ul.relatedLinks a:hover, ul.relatedLinks a:active {
+	text-decoration: underline;}
+	
+a.bold {
+	font-weight: bold;}
+
+a img, a:link img, a:visited img, a:hover img, a:active img {
+	border: 0;
+	display: block;}
+
+img {
+	display: block;}
+
+img.icon, img.inline, p.resultsLinks img,  a img.inline, a:link img.inline, a:visited img.inline, a:hover img.inline, a:active img.inline {
+	display: inline;
+	vertical-align: middle;}
+				
+th {
+	font-weight: bold;}

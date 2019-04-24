@@ -1,0 +1,48 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+    "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+    <field name="usuarioVO.dsNome">
+        <field-validator type="requiredstring">
+            <message key="campo.obrigatorio" />
+        </field-validator>
+    </field>
+    <field name="usuarioVO.dsEmail">
+        <field-validator type="requiredstring">
+            <message key="campo.obrigatorio" />
+        </field-validator>
+        <field-validator type="email">
+        	<message key="email.invalido"/>
+        </field-validator>
+    </field>
+	<field name="paramSenha1">
+	     <field-validator type="requiredstring">
+	         <message key="campo.obrigatorio" />
+	     </field-validator>
+	     <field-validator type="stringlength">
+			<param name="minLength">6</param>
+            <param name="trim">true</param>
+            <message key ="tamanho.minimo"/>
+	     </field-validator>
+	 </field>
+	<field name="paramSenha2">
+		<field-validator type="requiredstring">
+	         <message key="campo.obrigatorio" />
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<param name="trim">true</param>
+			<message key ="tamanho.minimo"/>
+		</field-validator>
+	</field>
+   <field name="usuarioVO.perfilVO.idPerfil">
+        <field-validator type="int">
+        	<param name="min">1</param>
+        	<param name="max">100</param>
+        	<message key="campo.obrigatorio" />	
+        </field-validator>
+        <field-validator type="required">
+        	<message key="campo.obrigatorio" />	
+        </field-validator>
+    </field>	
+	
+</validators>

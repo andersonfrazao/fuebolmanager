@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/tiles-config_2_0.dtd">     
+<tiles-definitions>
+	<!-- definição do layout da página principal -->	
+	<definition name="template.page" template="/template/layoutprincipal.jsp">
+		<put name="title" value="Futebol Manager"/>
+		<put name="cabecalho" value="/template/cabecalho.jsp"/>
+		<put name="rodape" value="/template/rodape.jsp"/>
+	</definition>
+	
+	<definition name="expired.page" extends="template.page">
+        <put name="body" value="/jsp/sessaoExpirada.jsp"/>
+    </definition>
+   <definition name="exception.page" extends="template.page">
+        <put name="body" value="/jsp/errors/exception.jsp"/>
+    </definition>
+	<definition name="login.page" extends="template.page">
+		<put name="pageTitle" value="Página inicial de Acesso ao Sistema"/>
+		<put name="body" value="/jsp/login.jsp"></put>
+	</definition>
+	<definition name="usuario.page" extends="template.page">
+		<put name="pageTitle" value="Administração de Usuários"/>
+		<put name="body" value="/jsp/usuario/usuario.jsp"/>
+	</definition>
+	<definition name="cadastroUsuario.page" extends="template.page">
+		<put name="pageTitle" value="Cadastro de Usuários"/>
+		<put name="body" value="/jsp/usuario/cadastroUsuario.jsp"/>
+	</definition>
+	<definition name="equipe.page" extends="template.page">
+		<put name="pageTitle" value="Administração de Equipes"/>
+		<put name="body" value="/jsp/equipe/equipe.jsp"></put>
+	</definition>
+	<definition name="cadastroEquipe.page" extends="template.page">
+		<put name="pageTitle" value="Cadastro de Equipes"/>
+		<put name="body" value="/jsp/equipe/cadastroEquipe.jsp"></put>
+	</definition>
+ </tiles-definitions>

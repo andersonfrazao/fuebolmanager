@@ -1,0 +1,723 @@
+/** OVERRIDE styles-30Jun05.css **/
+HTML{
+    font-family: Arial, Verdana, "Times New Roman";
+    font-size: 11px;
+    color: #666;
+    text-decoration: none;}
+    
+img {
+    display: inline;}
+
+#util, #util a:link, #util a:visited {
+	color: #3B73B9;
+	text-decoration: none;}
+#util a:hover, #util a:active {
+	color: #A9B8DF;
+	text-decoration: underline;}
+#mainCell {
+    width: 745px;
+    padding: 0 0 0 0;}
+    
+#pageTitle {
+    padding: 10px 0 0 0;}
+    
+.headTypeD {
+    width: 745px;}
+    	
+.headTypeX {
+    width: 745px;}
+	
+.grid_home { 
+    width: 745px;}
+    
+.grid_2-3_1-3 {
+    width: 745px;}
+    
+.grid_1-2_1-2 {
+    width: 745px;}
+    
+.grid_1-3_1-3_1-3 {
+    width: 745px;}
+    
+.grid_full .col1 {
+    width: 745px;}
+    
+LABEL, TD.tdLabel{
+    font-size: 12px;
+    color: #3B73B9;
+    text-align: left;   
+    white-space: nowrap;
+    }
+    
+label, td.noWrapLabel {
+	font-size: 11px;
+	color: #3B73B9;
+	text-align: left;
+	white-space: normal;
+}
+
+LABEL, TD.tdLabelp{
+    font-size: 11px;
+    color: #3B73B9;
+    text-align: center;    
+    white-space: nowrap;
+}
+
+LABEL, TD.tdLabelTitle{
+    font-size: 11px;
+    color: #3B73B9;
+    text-align: center;
+    width:1%;
+    white-space: nowrap;
+}
+
+.tdLabelBold{
+    font-size: 11px;
+    color: black;
+    font-weight: bold;
+    text-align: left;    
+    white-space: nowrap;
+}
+
+INPUT, SELECT, TEXTAREA{
+	font-family: Arial, Verdana, "Times New Roman";
+    font-size: 15px;
+    color: #666;
+    border: 2px inset;}
+INPUT.radio{
+    border:none;}
+INPUT.check{
+    border:none;}
+
+INPUT.btn{
+    BORDER-RIGHT: silver 1px solid;
+    BORDER-TOP: silver 1px solid;
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10px;
+    BACKGROUND-IMAGE: url(../images/fundo_botao.gif);
+    BORDER-LEFT: silver 1px solid;
+    CURSOR: hand;
+    COLOR: #ffffff;
+    BORDER-BOTTOM: silver 1px solid;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Geneva;
+    BACKGROUND-COLOR: #3b73b9;}
+
+.disabled{
+    BORDER-RIGHT: silver 1px solid;
+    BORDER-TOP: silver 1px solid;
+    BORDER-LEFT: silver 1px solid;
+    BORDER-BOTTOM: silver 1px solid;
+    CURSOR: hand;
+    FONT-SIZE: 10px;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Geneva;
+    font-weight:bolder;
+    BACKGROUND-COLOR: rgb(240,240,240);}
+    
+INPUT.btn2{
+    BORDER-RIGHT: silver 1px solid;
+    BORDER-TOP: silver 1px solid;
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: silver 1px solid;
+    CURSOR: hand;
+    COLOR: #ffffff;
+    BORDER-BOTTOM: silver 1px solid;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Geneva;
+    BACKGROUND-COLOR: #336600;
+}
+
+INPUT.img{
+    BORDER: none;
+    FONT-SIZE: 10px;
+    CURSOR: hand;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Geneva;
+    white-space: nowrap;}
+
+SELECT.doubleCssStyleSELECT{
+	width: inherit;}
+SELECT.doubleCssStyleLIST{
+	width: 100%;}
+	
+TABLE.tabelaLista{
+    font-size: 11px;
+    color: #666666;
+    background:rgb(162,162,162);}
+    
+TH.cabecalhoLista{
+    background:#3B73B9; 
+    color:#fff;
+    text-align:center;}
+    
+TD.linhaClara{
+    background:white;
+    text-align: center;}
+
+TD.linhaClaraTexto{
+    background:white;
+    text-align: left;}
+    
+TD.linhaClaraNumero{
+    background:white;
+    text-align: center;}
+    
+TD.linhaClaraData{
+    background:white;
+    text-align: center;}    
+    
+TD.linhaClaraMoeda{
+    background:white;
+    text-align: right;}
+
+TD.linhaEscura{
+    background:#E4E7E6;
+    text-align: center;}
+
+TD.linhaEscuraTexto{
+    background:#E4E7E6;
+    text-align: left;}
+    
+TD.linhaEscuraNumero{
+    background:#E4E7E6;
+    text-align: center;}
+    
+TD.linhaEscuraData{
+    background:#E4E7E6;
+    text-align: center;}    
+
+TD.linhaEscuraMoeda{
+    background:#E4E7E6;
+    text-align: right;}
+
+TD.linhaSlaEscura{
+    background:#E4E7E6;
+    color: red;
+    text-align: center;}
+
+TD.linhaSlaEscuraTexto{
+    background:#E4E7E6;
+    color: red;
+    text-align: left;}
+    
+TD.linhaSlaEscuraNumero{
+    background:#E4E7E6;
+    color: red;
+    text-align: center;}
+    
+TD.linhaSlaEscuraData{
+   background:#E4E7E6;
+   color: red;
+    text-align: center;}    
+
+TD.linhaSlaEscuraMoeda{
+    background:#E4E7E6;
+    color: red;
+    text-align: right;}
+
+TD.linhaSlaClara{
+    background:white;
+    color: red;
+    text-align: center;}
+
+TD.linhaSlaClaraTexto{
+   background:white;
+   color: red;
+    text-align: left;}
+    
+TD.linhaSlaClaraNumero{
+    background:white;
+    color: red;
+    text-align: center;}
+    
+TD.linhaSlaClaraData{
+    background:white;
+    color: red;
+    text-align: center;}    
+
+TD.linhaSlaClaraMoeda{
+    background:white;
+    color: red;
+    text-align: right;}
+
+
+TD.tituloGrid{
+    color: #3B73B9;
+    font-size: 16px;
+    border-bottom-width:1px;
+    border-bottom-style:dashed;
+    border-bottom-color:rgb(162,162,162);
+    height: 1px; 
+    margin-bottom: 10px;}
+    
+.botao
+{
+    BORDER-RIGHT: silver 1px solid;
+    BORDER-TOP: silver 1px solid;
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: silver 1px solid;
+    CURSOR: hand;
+    COLOR: #ffffff;
+    BORDER-BOTTOM: silver 1px solid;
+    FONT-STYLE: normal;
+    FONT-FAMILY: Verdana, Arial, Geneva;
+    BACKGROUND-COLOR: #3b73b9;
+}
+.titulo
+{
+    color: #33659E;
+    font-size: 12px;
+    font-weight: bold;
+}
+.tituloSublinhado
+{
+    color: #33659E;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom-width:1px;
+    border-bottom-style:solid;
+    border-bottom-color:rgb(162,162,162);
+}
+
+.tituloGrid
+{
+	color: #3B73B9;
+	font-size: 16px;
+	border-bottom-width:1px;
+	border-bottom-style:dashed;
+	border-bottom-color:rgb(162,162,162);
+	height: 1px; 
+	margin-bottom: 10px;
+}
+
+.labelDashed
+{
+	font-size: 11px;
+	color: #666666;
+	border-bottom-width:1px;
+	border-bottom-style:dashed;
+	border-bottom-color:rgb(162,162,162);
+}
+
+/* lateral */
+#MenuLateral
+{
+	padding: 0 0 0 0;
+	text-align: left;
+}
+
+#MenuLateral ul{
+	margin: 0px;
+	padding: 0px;
+	list-style-type:none;
+}
+
+#MenuLateral ul li{
+	padding: 3px 0 3px 11px;
+	background: url('./../images/seta_azul_baixo.gif') 0px 7px no-repeat;
+	border-bottom: 1px solid #cecfce;
+	font-weight: bold;
+}
+#MenuLateral ul li.nivel2in{
+	padding: 3px 0 3px 22px;
+	background: url('./../images/seta_azul_baixo.gif') 10px 7px no-repeat;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+#MenuLateral ul li.nivel2out{
+	padding: 3px 0 3px 22px;
+	background: url('./../images/seta_azul.gif') 10px 7px no-repeat;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+#MenuLateral ul li.nivel3out{
+	padding: 3px 0 3px 0;
+	background: none;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+
+#MenuLateral2
+{
+	padding: 0 0 0 0;
+	text-align: left;
+}
+
+#MenuLateral2 ul{
+	margin: 0px;
+	padding: 0px;
+	list-style-type:none;
+}
+
+#MenuLateral2 ul li{
+	padding: 3px 0 3px 11px;
+	background: url('./../images/seta_azul_baixo.gif') 0px 7px no-repeat;
+	border-bottom: 1px solid #cecfce;
+	font-weight: bold;
+}
+#MenuLateral2 ul li.nivel2in{
+	padding: 3px 0 3px 22px;
+	background: url('./../images/seta_azul_baixo.gif') 10px 7px no-repeat;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+#MenuLateral2 ul li.nivel2out{
+	padding: 3px 0 3px 22px;
+	background: url('./../images/seta_azul.gif') 10px 7px no-repeat;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+#MenuLateral2 ul li.nivel3out{
+	padding: 3px 0 3px 0;
+	background: none;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+
+#MenuLateral3
+{
+	padding: 0 0 0 0;
+	text-align: left;
+}
+
+#MenuLateral3 ul{
+	margin: 0px;
+	padding: 0px;
+	list-style-type:none;
+}
+
+#MenuLateral3 ul li{
+	padding: 3px 0 3px 11px;
+	background: url('./../images/seta_azul_baixo.gif') 0px 7px no-repeat;
+	border-bottom: 1px solid #cecfce;
+	font-weight: bold;
+}
+#MenuLateral3 ul li.nivel2in{
+	padding: 3px 0 3px 22px;
+	background: url('./../images/seta_azul_baixo.gif') 10px 7px no-repeat;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+#MenuLateral3 ul li.nivel2out{
+	padding: 3px 0 3px 22px;
+	background: url('./../images/seta_azul.gif') 10px 7px no-repeat;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+#MenuLateral3 ul li.nivel3out{
+	padding: 3px 0 3px 0;
+	background: none;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+
+#MenuLateral4
+{
+	padding: 0 0 0 0;
+	text-align: left;
+}
+
+#MenuLateral4 ul{
+	margin: 0px;
+	padding: 0px;
+	list-style-type:none;
+}
+
+#MenuLateral4 ul li{
+	padding: 3px 0 3px 11px;
+	background: url('./../images/seta_azul_baixo.gif') 0px 7px no-repeat;
+	border-bottom: 1px solid #cecfce;
+	font-weight: bold;
+}
+#MenuLateral4 ul li.nivel2in{
+	padding: 3px 0 3px 22px;
+	background: url('./../images/seta_azul_baixo.gif') 10px 7px no-repeat;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+#MenuLateral4 ul li.nivel2out{
+	padding: 3px 0 3px 22px;
+	background: url('./../images/seta_azul.gif') 10px 7px no-repeat;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+#MenuLateral4 ul li.nivel3out{
+	padding: 3px 0 3px 0;
+	background: none;
+	/*border-bottom: 1px dashed #cecfce;*/
+	font-weight: bold;
+}
+/* /lateral */
+
+ul.links{
+	margin: 0;
+	padding: 0;
+	list-style-image: none;/*url('./.../../images/seta_azul.gif');*/
+	list-style-type: none;
+}
+ul.links li{
+	padding-left: 12px;
+	background: url('./.../../images/seta_azul.gif') no-repeat;
+	background-position: 0 3;
+}
+/* /tags */
+
+.right{
+	float: center;
+}
+
+.toporight{
+	float: right;
+}
+
+.toporight2{
+	float: right;
+}
+
+.left{
+	float: left;
+}
+
+.center{
+	float: center;
+}
+
+.Borda
+{
+	border: 2px solid #CCCCCC;
+    float: left;
+}
+
+.leftMenu
+{
+	float: left;
+	position:absolute;
+	background-color:#FFFFFF;
+}
+
+.azul
+{
+	color: #3b73b9;
+	text-decoration: none;
+}
+
+.verde
+{
+	color:#99CE02	
+}
+
+.branco
+{
+	background-color:white;
+	border:thin;
+}
+
+.destaqueImg
+{
+	margin-right: 10px;
+	border: 1px solid #CCC;
+}
+#content
+{
+	width: 750px;
+}
+
+#content2
+{
+	width: 500px;
+}
+
+#meio
+{
+	height:110%
+}
+
+.texto
+{
+	margin:0px 15px 15px 5px;
+	float:left;
+	width:377px;
+}
+
+/* topo */
+#MenuTopo
+{
+	position: absolute;
+	border: 1px solid #CCCCCC;
+	background-color: #F7F7F7;
+	width: 760px;
+	height: 16px;
+	/*height: 16px;*/
+	padding: 1 0 1 0;
+}
+
+#MenuTopo ul{
+	margin: 0;
+	margin-top: 2px;
+	padding: 0px;
+}
+
+#MenuTopo ul li{
+	display: inline;
+	padding-right: 0;
+	width: 15%;
+	text-align: center;
+	color: #666;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+#MenuTopo ul li a{
+	background: url('./../images/seta_cinza.gif') 0px 3px no-repeat;
+	padding: 0 2 0 2;
+}
+#MenuTopo ul li a.over{
+	background: url('./.../../images/seta_azul_baixo.gif') 0px 3px no-repeat;
+	padding: 0 2 0 2;
+	color: #000!important;
+}
+
+#MenuTopo ul li a:visited{
+	color: #666;
+	text-decoration: none;
+}
+
+#MenuTopo ul li a:link{
+	color: #666;
+	text-decoration: none;
+}
+
+#MenuTopo ul li a:active{
+	color: #57a9d7;
+	text-decoration: none;
+}
+
+#MenuTopo ul li a:hover{
+	color: #57a9d7;
+	text-decoration: none;
+}
+
+/* /topo */
+
+
+
+
+labelDesconectado
+{
+	font-size: 14px;
+	color: #3B73B9;
+	font: bold;
+}
+
+.labelMenu2
+{
+	font-size: 11px;
+	color: #3b73b9; /*#666666;*/
+	font: bold;
+	padding: 3px 0 3px 22px;
+	border-bottom: 1px dashed #cecfce;
+	background: url('./../images/seta_azul.gif') 10px 7px no-repeat;
+	cursor: hand;
+}
+
+.label2
+{
+	font-size: 11px;
+	color: #666666;
+	border-bottom-width:1px;
+	border-bottom-style:dashed;
+	border-bottom-color:rgb(162,162,162);
+}
+.labelMenu
+{
+	font-size: 11px;
+	color: #666666;
+	border: 2px solid #CCCCCC;
+}
+.labelTopo
+{
+	font-size: 11px;
+	color: #666666;
+}
+
+.labelTd1
+{
+	font-size: 11px;
+	color: #3B73B9;
+}
+
+.labelTd2
+{
+	font-size: 11px;
+	color: #666666;
+	width:230px;
+}
+
+.labelTd3
+{
+	font-size: 11px;
+	color: #666666;
+	width:200px;
+}
+
+.labelTd4
+{
+	font-size: 11px;
+	color: #000000;
+}
+
+.labelTd5
+{
+	font-size: 11px;
+	color: #000000;
+	text-align:right;
+}
+
+.labelTopo2
+{
+	font-size: 11px;
+	color: #666666;
+	text-align:center;
+}
+
+
+.label3
+{
+	font-size: 11px;
+	color: #000000;
+	text-align:center;
+}
+
+.label4
+{
+	font-size: 11px;
+	color: #000000;
+	font:bold;
+}
+
+.label7
+{
+	font-size: 11px;
+	color: #000000;
+	font : bold;
+}
+
+.labelDoMenu
+{
+	font-size: 11px;
+	color: #666666;
+}
+
+.errorLabel 
+{
+	font-style: italic; 
+	color: red;
+}
+.errorMessage 
+{
+	color: red;
+}
+
+	
