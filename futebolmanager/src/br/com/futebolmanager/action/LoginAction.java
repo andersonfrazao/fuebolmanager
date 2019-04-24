@@ -10,6 +10,7 @@ import br.com.futebolmanager.vo.UsuarioVO;
 public class LoginAction extends AbstractAction{
 	
 	
+	
 	/**
 	 * 
 	 */
